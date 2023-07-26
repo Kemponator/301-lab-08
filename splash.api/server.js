@@ -18,7 +18,7 @@ app.get("/photos", async (request, response) => {
   const API = `https://api.unsplash.com/search/photos/?client_id=${process.env.ACCESS_KEY}&query=gogogo`;
   const res = await axios.get(API);
   //   console.log(res.data.results[0].urls.regular);
-  response.status(200).json("Hello again");
+  //   response.status(200).json("Hello again");
   const photos = res.data.results.map((photo) => {
     return {
       id: photo.id,
